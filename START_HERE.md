@@ -72,7 +72,6 @@ Enable MFC integration              → GUIDE.md (MFC section)
 Troubleshoot issues                 → GUIDE.md (Troubleshooting)
 See version history                 → CHANGELOG.md
 Contribute to project               → CONTRIBUTING.md
-Understand file dependencies        → FILE_DEPENDENCIES.md
 See project structure               → PROJECT_SUMMARY.md
 ```
 
@@ -87,7 +86,6 @@ See project structure               → PROJECT_SUMMARY.md
 | **cef_config.json** | Configuration file | ⭐ **Edit this** |
 | CHANGELOG.md | Version history | See what changed |
 | CONTRIBUTING.md | Contribution guide | Want to contribute |
-| FILE_DEPENDENCIES.md | File analysis | Understand structure |
 | PROJECT_SUMMARY.md | Project overview | High-level view |
 
 ---
@@ -105,9 +103,6 @@ See project structure               → PROJECT_SUMMARY.md
 
 ### "Something isn't working"
 👉 Read: **GUIDE.md** (Troubleshooting section)
-
-### "What files do I need?"
-👉 Read: **FILE_DEPENDENCIES.md**
 
 ### "How does this work?"
 👉 Read: **PROJECT_SUMMARY.md**
@@ -142,11 +137,7 @@ See project structure               → PROJECT_SUMMARY.md
    - Understand MFC integration
    - Learn advanced usage
 
-2. **FILE_DEPENDENCIES.md** (5 minutes)
-   - Understand file structure
-   - See how components work together
-
-3. **PROJECT_SUMMARY.md** (5 minutes)
+2. **PROJECT_SUMMARY.md** (5 minutes)
    - High-level architecture
    - Project organization
 
@@ -175,7 +166,6 @@ See project structure               → PROJECT_SUMMARY.md
 | cef_config.json | ~0.5 KB | 30 sec |
 | CHANGELOG.md | ~6 KB | 3-5 min |
 | CONTRIBUTING.md | ~8 KB | 5-8 min |
-| FILE_DEPENDENCIES.md | ~7 KB | 3-5 min |
 | PROJECT_SUMMARY.md | ~6 KB | 3-5 min |
 
 ---
@@ -205,6 +195,7 @@ See project structure               → PROJECT_SUMMARY.md
 - **Troubleshooting**: See GUIDE.md → Troubleshooting section
 - **Version History**: See CHANGELOG.md
 - **Contributing**: See CONTRIBUTING.md
+- **Project Overview**: See PROJECT_SUMMARY.md
 
 ---
 
