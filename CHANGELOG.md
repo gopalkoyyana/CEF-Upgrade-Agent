@@ -1,9 +1,88 @@
 # Changelog
 
-All notable changes to the CEF Upgrade Agent will be documented in this file.
+All notable changes to the CEF Upgrade Agent project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.0.0] - 2025-12-25
+
+### Added - CEF Unified Agent (RECOMMENDED)
+
+- **NEW: Unified Agent** (`cef_unified_agent.py`)
+  - Single command for complete download + build workflow
+  - Configuration file support (`cef_config.json`)
+  - No hardcoded versions - all settings externalized
+  - Integrated logging for both phases
+  - Phase control (skip download or build)
+  - Custom config file support
+  - Display configuration option
+
+- **Configuration Management**
+  - JSON-based configuration file
+  - Auto-creation of default config
+  - Support for multiple config files
+  - Version control friendly
+  - Easy version updates
+
+- **ConfigManager Class**
+  - Load/save configuration from JSON
+  - Merge with default settings
+  - Validation and error handling
+  - Display current configuration
+
+### Added - CEF Build Agent
+
+- **NEW: Complete Build Automation** (`cef_build_agent.py`)
+  - Automated CMake download and configuration
+  - Visual Studio project generation and configuration
+  - Automatic Runtime Library modification (/MD)
+  - MSBuild integration for libcef_dll_wrapper compilation
+  - Binary collection from multiple locations (include, Release, Resources, libcef_dll_wrapper.lib)
+  - Deployment to customizable target directory
+  - Support for Visual Studio 2015-2022
+  - Dry-run mode for safe testing
+
+- **CMakeDownloader Class**
+  - Automatic CMake binary download from GitHub releases
+  - Cross-platform support (Windows, macOS, Linux)
+  - Version-specific downloads
+  - Archive extraction
+
+- **CMakeConfigurator Class**
+  - Automated CMake configuration with Visual Studio generators
+  - Auto-detection of installed Visual Studio versions
+  - Platform architecture selection (x64, Win32)
+  - Build directory management
+
+- **VSProjectModifier Class**
+  - XML-based .vcxproj file modification
+  - Runtime Library setting automation
+  - Release configuration targeting
+
+- **VSBuilder Class**
+  - MSBuild auto-detection using vswhere
+  - Multi-processor build support
+  - Target-specific building (libcef_dll_wrapper)
+  - Detailed build logging
+
+- **BinaryCollector Class**
+  - Multi-source binary collection
+  - Structured deployment to target directory
+  - Verification of collected files
+
+### Documentation
+
+- Added `BUILD_QUICKSTART.md` - Comprehensive build agent quick start guide
+- Updated `README.md` with build agent documentation
+- Added build agent usage examples and workflow description
+- Created `test_build_agent.py` - Test suite for build automation
+
+### Integration
+
+- Build agent works standalone or with upgrade agent
+- Complete workflow: Download CEF → Build wrapper → Deploy binaries
+- Unified logging and reporting system
 
 ## [1.0.0] - 2025-12-07
 
